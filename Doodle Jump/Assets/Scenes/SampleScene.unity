@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 630255855}
   - component: {fileID: 630255859}
   m_Layer: 0
-  m_Name: Scuba_R
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,7 +511,7 @@ Transform:
   m_GameObject: {fileID: 630255854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: -5.21, z: 0}
+  m_LocalPosition: {x: 0.23, y: -1.64, z: 0}
   m_LocalScale: {x: 0.4054, y: 0.3819, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,11 +583,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4822168
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.138108
+      value: -11.9
       objectReference: {fileID: 0}
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1306892658103543723, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_Name
-      value: barracuda
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
