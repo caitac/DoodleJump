@@ -6,12 +6,15 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public Rigidbody2D rb; 
-
     private float moveX; 
+
+    private Camera camera; 
+
     // Start is called before the first frame update
     void Awake() //when loading
     {
         rb = GetComponent<Rigidbody2D>();
+        camera = camera.main;
     }
 
     // Update is called once per frame
@@ -20,10 +23,21 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal") * moveSpeed; //moves the position by factor of the move speed
     }
 
+    private void PlayerDies()
+    {
+
+    }
+
     private void FixedUpdate()
     {
         Vector2 velocity = rb.velocity; //updates everything
         velocity.x = moveX;
         rb. velocity = velocity;
+
+        Vector2 screenPosition = camera.WorldToScreenPoinnt(transform.positiion);
+        if (screenPosition.y <0)
+        {
+            PlayerDies();
+        }
     }
 }
