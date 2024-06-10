@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb; 
     private float moveX; 
 
-    private Camera camera; 
+    private Camera cameraSense; 
 
     // Start is called before the first frame update
     void Awake() //when loading
     {
         rb = GetComponent<Rigidbody2D>();
-        camera = camera.main;
+        cameraSense = Camera.main;
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         velocity.x = moveX;
         rb. velocity = velocity;
 
-        Vector2 screenPosition = camera.WorldToScreenPoinnt(transform.positiion);
+        Vector2 screenPosition = cameraSense.WorldToScreenPoint(transform.position);
         if (screenPosition.y <0)
         {
             PlayerDies();
