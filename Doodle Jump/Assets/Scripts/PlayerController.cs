@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10f;
     public Rigidbody2D rb; 
     private float moveX; 
-
     private Camera cameraSense; 
+
+    public bool isFacingRight;
+    public bool spawnFacingRight;
+    private Vector2 facingLeft; 
 
     // Start is called before the first frame update
     void Awake() //when loading
@@ -24,18 +27,19 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal") * moveSpeed; //moves the position by factor of the move speed
     }
 
-    private void PlayerDies()
-    {
-        Debug.Log("end screen loading");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
-
     private void FixedUpdate()
     {
         Vector2 velocity = rb.velocity; //updates everything
         velocity.x = moveX;
         rb. velocity = velocity;
+        if (velocity < 0)
+        {
+            //animation
+        }
+        else
+        {
+            //animation
+        }
 
         Vector2 screenPosition = cameraSense.WorldToScreenPoint(transform.position);
         if (screenPosition.y <0)
@@ -43,4 +47,12 @@ public class PlayerController : MonoBehaviour
             PlayerDies();
         }
     }
+
+    private void PlayerDies()
+    {
+        Debug.Log("end screen loading");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
 }
+
