@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10f;
     public Rigidbody2D rb; 
 
-    private float moveX;
+    private float moveX; 
     // Start is called before the first frame update
     void Awake() //when loading
     {
@@ -17,12 +17,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveX = Input.GetAxis("Horizontal") * moveSpeed;
+        moveX = Input.GetAxis("Horizontal") * moveSpeed; //moves the position by factor of the move speed
     }
 
     private void FixedUpdate()
     {
-        Vector2 velocity = rb.velocity;
+        Vector2 velocity = rb.velocity; //updates everything
         velocity.x = moveX;
         rb. velocity = velocity;
     }
