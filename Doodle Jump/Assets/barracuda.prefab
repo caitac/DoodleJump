@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826973725516578710}
   - component: {fileID: 4704442503443370165}
-  - component: {fileID: 4637977759286361120}
+  - component: {fileID: 8534061015329246080}
   - component: {fileID: 9179512707184406797}
   - component: {fileID: 2440621809004355965}
   m_Layer: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &4637977759286361120
+--- !u!68 &8534061015329246080
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,12 +122,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.5, y: 0}
-  - {x: -1.1436052, y: -0.024999619}
-  - {x: 0.25966477, y: -0.02808857}
-  - {x: 1.8596764, y: -0.03161049}
-  - {x: 11.035215, y: -0.05180931}
-  - {x: 12.5, y: 0}
+  - {x: -1.7361112, y: 0}
+  - {x: 0.06829856, y: 0}
+  - {x: 1.7361112, y: 0}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -163,3 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcace724c7f0106489389e8a22a39180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 10

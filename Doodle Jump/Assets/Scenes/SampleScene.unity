@@ -314,7 +314,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.111374
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962067e419e7bd44997c43f35ac9f719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 630255858}
 --- !u!1 &630255854
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,18 +438,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38673973, y: -5.668578}
+  m_Offset: {x: 0.2392863, y: -2.2370274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 20.48}
+    oldSize: {x: 6.826667, y: 6.826667}
     newSize: {x: 20.48, y: 20.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.85582, y: 5.910721}
+  m_Size: {x: 2.6174047, y: 1.1667504}
   m_EdgeRadius: 0
 --- !u!212 &630255857
 SpriteRenderer:
@@ -511,7 +512,7 @@ Transform:
   m_GameObject: {fileID: 630255854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: -1.64, z: 0}
+  m_LocalPosition: {x: -0.04, y: 4.36, z: 0}
   m_LocalScale: {x: 0.4054, y: 0.3819, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,6 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727dd0093f05d1f4d9bfda2d24eb3410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rb: {fileID: 0}
 --- !u!1 &1312421555
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e523006e35596478401adfc1fa7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 1448127927}
+  platformCount: 300
 --- !u!4 &1312421557
 Transform:
   m_ObjectHideFlags: 0
@@ -573,6 +578,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1448127927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1306892658103543723, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
+  m_PrefabInstance: {fileID: 6837045536782592954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6837045536782592954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -583,11 +593,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.9
+      value: -4.79
       objectReference: {fileID: 0}
     - target: {fileID: 826973725516578710, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_LocalPosition.z
