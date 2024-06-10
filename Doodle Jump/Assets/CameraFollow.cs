@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform target; 
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate() //unity has different types of updates! 
+    //if the behavior is enabled lateupdate will be calle after all update functions 
     {
-        
+        if (target.position.y > transform.position.y)
+        {
+            Vector3 newPosition = new Vector3(transform.position.x, target.position.y, transform.position.z);
+            transform.position = newPosition; //updates the position of the player
+        }
     }
 }
