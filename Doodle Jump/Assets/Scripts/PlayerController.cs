@@ -9,10 +9,9 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb; 
     private float moveX; 
     private Camera cameraSense; 
-
-    public bool isFacingRight;
-    public bool spawnFacingRight;
-    private Vector2 facingLeft; 
+    public bool isFacingRight = true;
+    //public bool spawnFacingRight;
+    //private Vector2 facingLeft; 
 
     // Start is called before the first frame update
     void Awake() //when loading
@@ -32,14 +31,6 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = rb.velocity; //updates everything
         velocity.x = moveX;
         rb. velocity = velocity;
-        if (velocity < 0)
-        {
-            //animation
-        }
-        else
-        {
-            //animation
-        }
 
         Vector2 screenPosition = cameraSense.WorldToScreenPoint(transform.position);
         if (screenPosition.y <0)
