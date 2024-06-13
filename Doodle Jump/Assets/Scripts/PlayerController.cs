@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 6f;
+    public float moveSpeed = 7f;
     public Rigidbody2D rb; 
     private float moveX; 
     private Camera cameraSense; // for death

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     private GameObject player;
-    public float jumpForce = 10f; // scale at which the players position will update  
+    public float jumpForce = 11f; // scale at which the players position will update  
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.y <= 0f)
@@ -43,9 +43,9 @@ public class Platform : MonoBehaviour
 
        public void DestroyOutOfBounds() 
         {
-            Debug.Log(gameObject.transform.position.y);
-            Debug.Log(player.transform.position.y);
-        if (gameObject.transform.position.y > (player.transform.position.y + 30))
+            //Debug.Log(gameObject.transform.position.y);
+            //Debug.Log(player.transform.position.y);
+        if (gameObject.transform.position.y > (player.transform.position.y + 40))
         {
             Destroy(gameObject);
             Debug.Log("deleted object!");

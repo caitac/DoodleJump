@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     //public int platformCount = 500; // game stops at this many 
     Vector3 spawnPosition = new Vector3();
 
-    
+    public float count; 
+
     void Start()
     {
         StartAddFishBelow();
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         StartAddFish();
 
         StartCoroutine(AddFish());
+        Debug.Log("start");
     }
 
     public void StartAddFishBelow() // ik this can be done without repeating code by taking in varibles (im sorry)
@@ -50,15 +52,23 @@ public class GameManager : MonoBehaviour
         int index = Random.Range(0, platformPrefabs.Count); 
         Instantiate(platformPrefabs[index], spawnPosition, Quaternion.identity);
     }
+    
     IEnumerator AddFish()
     {
-        spawnPosition.y = player.transform.position.y + 10f;
-        float xValue = (Random.Range(60f, 60f) / 5);
-        spawnPosition.x = xValue; //used to be Random.Range(-10f, 10f) 
-            
-        int index = Random.Range(0, platformPrefabs.Count); 
-        Instantiate(platformPrefabs[index], spawnPosition, Quaternion.identity);
-        yield return new WaitForSeconds(1);
+        while(count <1000)
+        {
+            Debug.Log("Actually started");
+            spawnPosition.y = player.transform.position.y + 10f;
+            float xValue = (Random.Range(-60f, 60f) / 5);
+            spawnPosition.x = xValue; //used to be Random.Range(-10f, 10f) 
+                
+            int index = Random.Range(0, platformPrefabs.Count); 
+            Instantiate(platformPrefabs[index], spawnPosition, Quaternion.identity);
+            Debug.Log("Did it!");
+
+            count += 1f;
+            yield return new WaitForSeconds(.4f);
+        }
     }
 
     
