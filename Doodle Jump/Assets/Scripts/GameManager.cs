@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         // StartAddFishBelow();
         // StartAddFishBelow();
         for (int i = 0; i<5; i++) {
-            StartAddFish(-60f/5,60f/5, 1f, 15f);
+            StartAddFish(-50f/5,50f/5, 1f, 15f);
             StartAddFish(-15f,15f, -10f, 5f);
 
         }
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         while(count <1000)
         {
             Debug.Log("Actually started");
-            spawnPosition.y = player.transform.position.y + 10f;
+            spawnPosition.y = player.transform.position.y + 4f;
             float xValue = (Random.Range(-60f, 60f) / 5);
             spawnPosition.x = xValue; //used to be Random.Range(-10f, 10f) 
                 
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Did it!");
 
             count += 1f;
-            yield return new WaitForSeconds(.4f);
+            yield return new WaitForSeconds(.75f);
         }
     }
 
