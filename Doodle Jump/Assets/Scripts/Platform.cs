@@ -45,7 +45,7 @@ public class Platform : MonoBehaviour
         {
             Debug.Log(gameObject.transform.position.y);
             Debug.Log(player.transform.position.y);
-        if (gameObject.transform.position.y > (player.transform.position.y + 50))
+        if (gameObject.transform.position.y > (player.transform.position.y + 30))
         {
             Destroy(gameObject);
             Debug.Log("deleted object!");
