@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform target; 
 
     private void LateUpdate() //unity has different types of updates! 
-    //if the behavior is enabled lateupdate will be calle after all update functions 
+    //if the behavior is enabled lateupdate will be called after all update functions 
     {
         if (target.position.y > transform.position.y)
         {

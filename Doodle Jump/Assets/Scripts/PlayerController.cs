@@ -63,6 +63,14 @@ public class PlayerController : MonoBehaviour
         {
             PlayerDies();
         }
+        if (screenPosition.x < 0 && velocity.x < 0)
+        {
+            velocity = new Vector2(0, velocity.y);
+        }
+        else if(screenPosition.x > cameraSense.pixelWidth && velocity.x > 0)
+        {
+            velocity = new Vector2(0, velocity.y);
+        }
 
     }
 
@@ -70,7 +78,6 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("end screen loading");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 }
 

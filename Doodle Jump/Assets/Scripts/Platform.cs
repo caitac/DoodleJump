@@ -22,6 +22,14 @@ public class Platform : MonoBehaviour
         }
     }
 
+    private void OnCollusionEnter(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Edge"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Update()
     {
         
