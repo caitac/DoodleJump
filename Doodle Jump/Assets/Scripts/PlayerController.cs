@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
         //moving back and forth
         facingLeft = new Vector2(-transform.localScale.x, transform.localScale.y);
-        facingRight = new Vector2(transform.localScale.x, transformScale.y);
+        facingRight = new Vector2(transform.localScale.x, transform.localScale.y);
     }
 
     // Update is called once per frame
@@ -46,7 +46,15 @@ public class PlayerController : MonoBehaviour
             isFacingLeft = true;
         }
         else{
-            
+            isFacingRight = true;
+            isFacingLeft = false;
+        }
+
+        if(isFacingRight){
+            transform.localScale = facingRight;
+        }
+        else if(isFacingLeft){
+            transform.localScale = facingLeft;
         }
 
         //THIS IS FOR DEATH

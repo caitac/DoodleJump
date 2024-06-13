@@ -10,7 +10,8 @@ public class Platform : MonoBehaviour
     {
         if (collision.relativeVelocity.y <= 0f)
         {
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();            if (rb != null)
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();            
+            if (rb != null)
             {
                 if(rb != null){
                     Vector2 velocity = rb.velocity;
