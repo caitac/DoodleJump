@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        
         //for (int i = 1; i < platformCount; i++){
           //  spawnPosition.y += Random.Range(.5f, 2f);
             //spawnPosition.x = Random.Range(-10f, 10f);
@@ -35,7 +34,7 @@ public class GameManager : MonoBehaviour
         //     platformPrefabs[i].SetActive(true);
         // }
         
-        spawnPosition.y += Random.Range(.5f, 2f);
+        spawnPosition.y += 1;
         float xValue = (Random.Range(-100f, 100f) / 5);
         spawnPosition.x = xValue; //used to be Random.Range(-10f, 10f) 
             

@@ -32,13 +32,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal") * moveSpeed; //moves the position by factor of the move speed
+        // Debug.Log(moveX);
+        // Debug.Log(gameObject.transform.position.x);
+
     }
 
     private void FixedUpdate()
     {
         Vector2 velocity = rb.velocity; //updates everything
         velocity.x = moveX;
-        rb. velocity = velocity;
+        rb.velocity = velocity;
 
         if(velocity.x < 0)
         {
@@ -63,7 +66,8 @@ public class PlayerController : MonoBehaviour
         {
             PlayerDies();
         }
-        if (screenPosition.x < 0 && velocity.x < 0)
+
+        if (gameObject.transform.position.x < 0 && velocity.x < 0)
         {
             velocity = new Vector2(0, velocity.y);
         }

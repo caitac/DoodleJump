@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    private GameObject player;
     public float jumpForce = 10f; // scale at which the players position will update  
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,19 +23,35 @@ public class Platform : MonoBehaviour
         }
     }
 
-    private void OnCollusionEnter(Collision2D collision)
+    // private void OnCollusionEnter(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == ("Edge"))
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
+    void Start() 
     {
-        if (collision.gameObject.tag == ("Edge"))
-        {
-            Destroy(gameObject);
-        }
+        player = GameObject.Find("Player");
     }
 
     void Update()
     {
-        
-
+        DestroyOutOfBounds(); //delete if out of bounds
         //check if off screen and delete if yas 
     }
+
+       public void DestroyOutOfBounds() 
+        {
+            Debug.Log(gameObject.transform.position.y);
+            Debug.Log(player.transform.position.y);
+        if (gameObject.transform.position.y > (player.transform.position.y + 50))
+        {
+            Destroy(gameObject);
+            Debug.Log("deleted object!");
+        }
+  
+    }
+
 }
 
