@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     private GameObject player;
+    private Camera cameraSense; // for delete
     public float jumpForce = 11f; // scale at which the players position will update  
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -30,6 +31,12 @@ public class Platform : MonoBehaviour
     //         Destroy(gameObject);
     //     }
     // }
+
+    void Awake() //when loading
+    {
+        cameraSense = Camera.main;
+    }
+
     void Start() 
     {
         player = GameObject.Find("Player");
@@ -37,21 +44,17 @@ public class Platform : MonoBehaviour
 
     void Update()
     {
-        DestroyOutOfBounds(); //delete if out of bounds
+        // DestroyOutOfBounds(); //delete if out of bounds
         //check if off screen and delete if yas 
     }
 
-       public void DestroyOutOfBounds() 
-        {
-            //Debug.Log(gameObject.transform.position.y);
-            //Debug.Log(player.transform.position.y);
-        if (gameObject.transform.position.y > (player.transform.position.y + 40))
-        {
-            Destroy(gameObject);
-            Debug.Log("deleted object!");
-        }
+        // Vector2 screenPosition = cameraSense.WorldToScreenPoint(transform.position);
+        // if (screenPosition.y <0)
+        // {
+        //     Destroy(gameObject);
+        // }
   
-    }
+    
 
 }
 

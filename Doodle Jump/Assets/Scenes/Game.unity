@@ -545,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc424418d6123ea429f04d9b34077cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenBounds: {x: 0, y: 0}
 --- !u!1 &1312421555
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +582,7 @@ MonoBehaviour:
   - {fileID: 1115189440376785268, guid: bd3ee7e0a3e1d2e4787df6e1233d35a9, type: 3}
   - {fileID: 4752032899190066632, guid: a14460deb3eeb374088af837c6afd31e, type: 3}
   - {fileID: 5317444372322427049, guid: 5e0a554822db78e42a6c3d7be77078d8, type: 3}
+  count: 0
 --- !u!4 &1312421557
 Transform:
   m_ObjectHideFlags: 0
@@ -658,6 +658,10 @@ PrefabInstance:
     - target: {fileID: 1306892658103543723, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306892658103543723, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
+      propertyPath: m_TagString
+      value: Fish
       objectReference: {fileID: 0}
     - target: {fileID: 2440621809004355965, guid: 0318ca391c3a759468aeaaf499de16f7, type: 3}
       propertyPath: cameraSense
