@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 8f;
+    public float moveSpeed = 6f;
     public Rigidbody2D rb; 
     private float moveX; 
-    private Camera cameraSense;
+    private Camera cameraSense; // for death
 
     //move back and forth tehehe
     private bool isFacingRight;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cameraSense = Camera.main;
-
+        
         //moving back and forth
         facingLeft = new Vector2(-transform.localScale.x, transform.localScale.y);
         facingRight = new Vector2(transform.localScale.x, transform.localScale.y);
@@ -67,13 +67,13 @@ public class PlayerController : MonoBehaviour
             PlayerDies();
         }
 
-        if (gameObject.transform.position.x < 0 && velocity.x < 0)
+        if (gameObject.transform.position.x < -12 && velocity.x < 0)
         {
-            velocity = new Vector2(0, velocity.y);
+            velocity = new Vector2(1, velocity.y);
         }
-        else if(screenPosition.x > cameraSense.pixelWidth && velocity.x > 0)
+        else if(screenPosition.x > 12 && velocity.x > 0)
         {
-            velocity = new Vector2(0, velocity.y);
+            velocity = new Vector2(-1, velocity.y);
         }
 
     }
