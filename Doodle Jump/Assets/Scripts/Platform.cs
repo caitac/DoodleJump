@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public float jumpForce = 10f; // scale at which the players position will update 
-
+    public float jumpForce = 10f; // scale at which the players position will update  
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.y <= 0f)
@@ -22,4 +21,12 @@ public class Platform : MonoBehaviour
 
         }
     }
+
+    void Update()
+    {
+        
+
+        //check if off screen and delete if yas 
+    }
 }
+
