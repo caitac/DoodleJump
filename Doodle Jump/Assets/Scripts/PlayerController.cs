@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 10f;
+    public float moveSpeed = 8f;
     public Rigidbody2D rb; 
     private float moveX; 
     private Camera cameraSense;
